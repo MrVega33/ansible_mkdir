@@ -1,7 +1,7 @@
 - name: Creates directory Sample
   hosts: all
   tasks:
-    - name: Creates directory
+    - name: ensure file exists
       copy:
       content: ""
       dest: /etc/nologin
