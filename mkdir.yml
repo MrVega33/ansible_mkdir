@@ -1,4 +1,5 @@
 - name: Creates directory
+  hosts: all
   file:
     path: /src/www
     state: directory
