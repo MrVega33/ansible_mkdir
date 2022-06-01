@@ -1,7 +1,5 @@
 - name: Creates directory Sample
   hosts: all
   tasks:
-    - name: Delete existing dist folder
-      file:
-        path: "/dist"
-        state: absent
+    - name: "Run a shell command on a remote host"
+      shell: ls -la
