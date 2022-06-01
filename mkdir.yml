@@ -1,11 +1,9 @@
 - name: Creates directory Sample
   hosts: all
   tasks:
-    - name: ensure file exists
-      copy:
-      content: ""
-      dest: /etc/nologin
-      force: no
-      group: sys
-      owner: root
-      mode: 0555
+    - name: Just get information about the repository whether or not it has already been cloned locally
+      ansible.builtin.git:
+        repo: 'https://github.com/MrVega33/ansible_mkdir.git'
+        dest: /srv/checkout
+        clone: yes
+        update: no
