@@ -3,5 +3,5 @@
   tasks:
     - name: Delete existing dist folder
       file:
-        path: "{{ base_path }}/dist"
+        path: "/dist"
         state: absent
