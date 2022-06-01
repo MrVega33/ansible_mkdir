@@ -2,6 +2,10 @@
   hosts: all
   tasks:
     - name: Creates directory
-      file:
-        path: /src/www
-        state: directory
+      copy:
+      content: ""
+      dest: /etc/nologin
+      force: no
+      group: sys
+      owner: root
+      mode: 0555
