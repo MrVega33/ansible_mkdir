@@ -1,9 +1,7 @@
 - name: Creates directory Sample
   hosts: all
   tasks:
-    - name: Just get information about the repository whether or not it has already been cloned locally
-      ansible.builtin.git:
-        repo: 'https://github.com/MrVega33/ansible_mkdir.git'
-        dest: /srv/checkout
-        clone: yes
-        update: no
+    - name: Delete existing dist folder
+      file:
+        path: "{{ base_path }}/dist"
+        state: absent
