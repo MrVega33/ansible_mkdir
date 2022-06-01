@@ -1,5 +1,7 @@
-- name: Creates directory
+- name: Creates directory Sample
   hosts: all
-  file:
-    path: /src/www
-    state: directory
+  tasks:
+    - name: Creates directory
+      file:
+        path: /src/www
+        state: directory
